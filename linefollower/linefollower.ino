@@ -25,7 +25,7 @@ Serial.println(leftValue);
 Serial.println(centerValue);
 Serial.println(rightValue);
 Serial.print("\n");
-delay(1000);
+delay(5);
 if (leftValue == 1 && centerValue == 0 && rightValue == 1)
 {
 Serial.print("Forward");
