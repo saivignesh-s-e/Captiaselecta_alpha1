@@ -55,8 +55,8 @@ void setup()
  }
 void advance(int a)     // 
     {
-     analogWrite(speedpin,240);//define speed
-     analogWrite(speedpin1,240);
+     /*analogWrite(speedpin,150);//define speed
+     analogWrite(speedpin1,150);*/
      digitalWrite(pinRB,HIGH);  // 
      digitalWrite(pinRF,LOW);
      digitalWrite(pinLB,LOW);  //
@@ -138,18 +138,18 @@ void detection()        //
       int delay_time = 250;   // 
       ask_pin_F();            // 
       
-      if(Fspeedd <= 10 )         // 
+      if(Fspeedd <= 20 )         // 
          {
             stopp(1);               //  
             back(8);                // 
          }
-       /*if(Fspeedd>100 && Fspeedd<260)
+       if(Fspeedd>100 && Fspeedd<260)
        {
             stopp(1);               //  
             back(1); 
             turnL(2); 
-       }*/
-      if(Fspeedd < 20)         // 
+       }
+      if(Fspeedd < 30)         // 
       {
         
         stopp(1);               //  
@@ -174,7 +174,7 @@ void detection()        //
          directionn = Rgo;      //
         } 
         
-        if (L1_speedd+L2_speedd+L3_speedd+L4_speedd+L5_speedd < 10 && R1_speedd+R2_speedd+R3_speedd+R4_speedd+R5_speedd < 10)   //
+        if (L1_speedd+L2_speedd+L3_speedd+L4_speedd+L5_speedd < 20 && R1_speedd+R2_speedd+R3_speedd+R4_speedd+R5_speedd < 20)   //
         {
          directionn = Bgo;      //        
         }          
