@@ -1,0 +1,149 @@
+I-Logix-RPY-Archive version 8.11.0 * 9499822
+
+- m_fileModifyTime = { IRPYRawContainer 
+	- size = 24;
+	- value = "DefaultComponent\\Arduino_Car_Simulation\\ArduiniCar_Structure.cpp" 6.28.2016::19:17:49
+	"DefaultComponent\\Arduino_Car_Simulation\\ArduiniCar_Structure.h" 6.28.2016::19:17:49
+	"DefaultComponent\\Arduino_Car_Simulation\\Arduino_Car.cpp" 6.28.2016::19:17:48
+	"DefaultComponent\\Arduino_Car_Simulation\\Arduino_Car.h" 6.28.2016::19:17:48
+	"DefaultComponent\\Arduino_Car_Simulation\\Arduino_Controller.cpp" 6.28.2016::19:17:48
+	"DefaultComponent\\Arduino_Car_Simulation\\Arduino_Controller.h" 6.28.2016::19:17:48
+	"DefaultComponent\\Arduino_Car_Simulation\\Battery.cpp" 6.28.2016::19:17:49
+	"DefaultComponent\\Arduino_Car_Simulation\\Battery.h" 6.28.2016::19:17:49
+	"DefaultComponent\\Arduino_Car_Simulation\\CONTROLLER_Subsystem.cpp" 6.28.2016::19:17:48
+	"DefaultComponent\\Arduino_Car_Simulation\\CONTROLLER_Subsystem.h" 6.28.2016::19:17:48
+	"DefaultComponent\\Arduino_Car_Simulation\\Chassis.cpp" 6.28.2016::19:17:49
+	"DefaultComponent\\Arduino_Car_Simulation\\Chassis.h" 6.28.2016::19:17:49
+	"DefaultComponent\\Arduino_Car_Simulation\\DC_Motor.cpp" 6.28.2016::19:17:49
+	"DefaultComponent\\Arduino_Car_Simulation\\DC_Motor.h" 6.28.2016::19:17:49
+	"DefaultComponent\\Arduino_Car_Simulation\\H_Bridge.cpp" 6.28.2016::19:17:48
+	"DefaultComponent\\Arduino_Car_Simulation\\H_Bridge.h" 6.28.2016::19:17:48
+	"DefaultComponent\\Arduino_Car_Simulation\\POWER_Subsystem.cpp" 6.28.2016::19:17:48
+	"DefaultComponent\\Arduino_Car_Simulation\\POWER_Subsystem.h" 6.28.2016::19:17:48
+	"DefaultComponent\\Arduino_Car_Simulation\\Servo_Motor.cpp" 6.28.2016::19:17:49
+	"DefaultComponent\\Arduino_Car_Simulation\\Servo_Motor.h" 6.28.2016::19:17:49
+	"DefaultComponent\\Arduino_Car_Simulation\\Ultrasonic_Sensor.cpp" 6.28.2016::19:17:49
+	"DefaultComponent\\Arduino_Car_Simulation\\Ultrasonic_Sensor.h" 6.28.2016::19:17:49
+	"DefaultComponent\\Arduino_Car_Simulation\\Wheels.cpp" 6.28.2016::19:17:49
+	"DefaultComponent\\Arduino_Car_Simulation\\Wheels.h" 6.28.2016::19:17:49
+	
+}
+- size = 13;
+- hElement = { IHandle 
+	- _m2Class = "ISubsystem";
+	- _filename = "ArduiniCar_Structure.sbs";
+	- _subsystem = "";
+	- _class = "";
+	- _name = "ArduiniCar_Structure";
+	- _id = GUID 861347c8-dffb-4ff5-a82c-147308be3689;
+}
+- genTime = 6.28.2016::19:17:49;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = "ArduiniCar_Structure.sbs";
+	- _subsystem = "ArduiniCar_Structure";
+	- _class = "";
+	- _name = "Chassis";
+	- _id = GUID 7d9706b2-1cd6-4ac7-b781-18a057460dac;
+}
+- genTime = 6.28.2016::19:17:49;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = "ArduiniCar_Structure.sbs";
+	- _subsystem = "ArduiniCar_Structure";
+	- _class = "";
+	- _name = "H_Bridge";
+	- _id = GUID bd908ef5-c511-4b1c-bc61-9b9994035a35;
+}
+- genTime = 6.28.2016::19:17:49;
+- hElement = { IHandle 
+	- _m2Class = "ICodeGenConfigInfo";
+	- _filename = "DefaultComponent.cmp";
+	- _subsystem = "";
+	- _class = "";
+	- _name = "DefaultComponent\\Arduino_Car_Simulation";
+	- _id = GUID df018d15-ebc1-474a-b346-512ffe3c280a;
+}
+- genTime = 6.28.2016::19:17:49;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = "ArduiniCar_Structure.sbs";
+	- _subsystem = "ArduiniCar_Structure";
+	- _class = "";
+	- _name = "Wheels";
+	- _id = GUID b9bcb765-7e37-4ff1-983c-134b438c2b09;
+}
+- genTime = 6.28.2016::19:17:49;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = "ArduiniCar_Structure.sbs";
+	- _subsystem = "ArduiniCar_Structure";
+	- _class = "";
+	- _name = "Arduino_Car";
+	- _id = GUID 563699cc-a3c7-48c9-8d13-a5f9ed808386;
+}
+- genTime = 6.28.2016::19:17:49;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = "ArduiniCar_Structure.sbs";
+	- _subsystem = "ArduiniCar_Structure";
+	- _class = "";
+	- _name = "DC_Motor";
+	- _id = GUID cd80ee6a-afa3-4753-8bbb-71764e3993e1;
+}
+- genTime = 6.28.2016::19:17:49;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = "ArduiniCar_Structure.sbs";
+	- _subsystem = "ArduiniCar_Structure";
+	- _class = "";
+	- _name = "Battery";
+	- _id = GUID 75eaa3eb-dc71-4514-a56d-c517baed17e7;
+}
+- genTime = 6.28.2016::19:17:49;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = "ArduiniCar_Structure.sbs";
+	- _subsystem = "ArduiniCar_Structure";
+	- _class = "";
+	- _name = "CONTROLLER_Subsystem";
+	- _id = GUID bed64de8-d903-4423-8107-ade07ef02776;
+}
+- genTime = 6.28.2016::19:17:49;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = "ArduiniCar_Structure.sbs";
+	- _subsystem = "ArduiniCar_Structure";
+	- _class = "";
+	- _name = "Ultrasonic_Sensor";
+	- _id = GUID da58ec76-1ce1-4a6a-83cd-1cab98be455e;
+}
+- genTime = 6.28.2016::19:17:49;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = "ArduiniCar_Structure.sbs";
+	- _subsystem = "ArduiniCar_Structure";
+	- _class = "";
+	- _name = "Servo_Motor";
+	- _id = GUID c08fc7d2-d666-413f-95f4-fab2f09d782b;
+}
+- genTime = 6.28.2016::19:17:49;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = "ArduiniCar_Structure.sbs";
+	- _subsystem = "ArduiniCar_Structure";
+	- _class = "";
+	- _name = "POWER_Subsystem";
+	- _id = GUID e15d572c-bd0c-4097-ab1f-e3ec370a9604;
+}
+- genTime = 6.28.2016::19:17:49;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = "ArduiniCar_Structure.sbs";
+	- _subsystem = "ArduiniCar_Structure";
+	- _class = "";
+	- _name = "Arduino_Controller";
+	- _id = GUID 1cd4aac7-f765-4f95-8dbc-50176e0968e2;
+}
+- genTime = 6.28.2016::19:17:49;
+

@@ -1,0 +1,150 @@
+I-Logix-RPY-Archive version 8.11.0 * 9499822
+{ CGEMdiWorkspace 
+	- stubList = { IRPYRawContainer 
+		- size = 0;
+	}
+	- isLoadOnDemand = 0;
+	- myViewsWithID = { IRPYRawContainer 
+		- size = 4;
+		- value = 
+		{ CGEMdiDiagramParams 
+			- _placement = { CCommon_WINDOWPLACEMENT 
+				- m_nLength = 44;
+				- m_nFlags = 0;
+				- m_showCmd = 1;
+				- m_ptMinPositionX = 0;
+				- m_ptMinPositionY = 701;
+				- m_ptMaxPositionX = -8;
+				- m_ptMaxPositionY = -27;
+				- m_nLeft = 66;
+				- m_nTop = 66;
+				- m_nRight = 889;
+				- m_nBottom = 420;
+			}
+			- _wasOpenedOnCloseProject = 1;
+			- _theDiagram = { IHandle 
+				- _m2Class = "IDiagram";
+				- _filename = "ArduiniCar_Structure.sbs";
+				- _subsystem = "ArduiniCar_Structure";
+				- _class = "";
+				- _name = "ArduinoCar_Structure";
+				- _id = GUID 37cc3d3e-981d-4cfc-b6f4-ed159a57d3de;
+			}
+			- _UpLeft = 137 0 ;
+			- _DownRight = 954 310 ;
+			- _instanceName = "";
+			- m_nDiagramIndex = 3;
+		}
+		{ CGEMdiDiagramParams 
+			- _placement = { CCommon_WINDOWPLACEMENT 
+				- m_nLength = 44;
+				- m_nFlags = 0;
+				- m_showCmd = 1;
+				- m_ptMinPositionX = -1;
+				- m_ptMinPositionY = -1;
+				- m_ptMaxPositionX = -8;
+				- m_ptMaxPositionY = -27;
+				- m_nLeft = 88;
+				- m_nTop = 88;
+				- m_nRight = 908;
+				- m_nBottom = 478;
+			}
+			- _wasOpenedOnCloseProject = 1;
+			- _theDiagram = { IHandle 
+				- _m2Class = "IStateChartDiagram";
+				- _filename = "ArduiniCar_Structure.sbs";
+				- _subsystem = "ArduiniCar_Structure";
+				- _class = "Arduino_Car";
+				- _name = "StatechartDiagram.ROOT.LINE_FLWR";
+				- _id = GUID 483a59b4-2305-4ba3-8f62-4c407aa2e2b7;
+			}
+			- _UpLeft = 0 0 ;
+			- _DownRight = 783 334 ;
+			- _instanceName = "";
+			- m_nDiagramIndex = 0;
+		}
+		{ CGEMdiDiagramParams 
+			- _placement = { CCommon_WINDOWPLACEMENT 
+				- m_nLength = 44;
+				- m_nFlags = 0;
+				- m_showCmd = 1;
+				- m_ptMinPositionX = -1;
+				- m_ptMinPositionY = -1;
+				- m_ptMaxPositionX = -8;
+				- m_ptMaxPositionY = -27;
+				- m_nLeft = 66;
+				- m_nTop = 66;
+				- m_nRight = 1001;
+				- m_nBottom = 456;
+			}
+			- _wasOpenedOnCloseProject = 1;
+			- _theDiagram = { IHandle 
+				- _m2Class = "IStateChartDiagram";
+				- _filename = "ArduiniCar_Structure.sbs";
+				- _subsystem = "ArduiniCar_Structure";
+				- _class = "Arduino_Car";
+				- _name = "StatechartDiagram.ROOT.MANUAL";
+				- _id = GUID 6be7a399-5277-48e9-8e0d-95f0f2268a3a;
+			}
+			- _UpLeft = 0 40 ;
+			- _DownRight = 898 374 ;
+			- _instanceName = "";
+			- m_nDiagramIndex = 1;
+		}
+		{ CGEMdiDiagramParams 
+			- _placement = { CCommon_WINDOWPLACEMENT 
+				- m_nLength = 44;
+				- m_nFlags = 2;
+				- m_showCmd = 3;
+				- m_ptMinPositionX = -1;
+				- m_ptMinPositionY = -1;
+				- m_ptMaxPositionX = -8;
+				- m_ptMaxPositionY = -27;
+				- m_nLeft = 66;
+				- m_nTop = 66;
+				- m_nRight = 889;
+				- m_nBottom = 420;
+			}
+			- _wasOpenedOnCloseProject = 1;
+			- _theDiagram = { IHandle 
+				- _m2Class = "IStateChartDiagram";
+				- _filename = "ArduiniCar_Structure.sbs";
+				- _subsystem = "ArduiniCar_Structure";
+				- _class = "Arduino_Car";
+				- _name = "StatechartDiagram";
+				- _id = GUID 45207b31-9ada-4a4d-a24e-6b6c79a4926d;
+			}
+			- _UpLeft = 0 -32 ;
+			- _DownRight = 975 513 ;
+			- _instanceName = "";
+			- m_nDiagramIndex = 2;
+		}
+	}
+	- _fullName = "F:\\AT_New\\CapitaSelecta_ArduinoCar\\Project";
+	- m_SearchScopeList = { IRPYRawContainer 
+		- size = 0;
+	}
+	- bUsingCustomBrowserView = 0;
+	- bUsingQueries = 0;
+	- bApplyOnDiagrams = 0;
+	- liQueryIDs = { IRPYRawContainer 
+		- size = 0;
+	}
+	- liElementTypes = { IRPYRawContainer 
+		- size = 0;
+	}
+
+	- m_favoritesTree = {
+		count=1;
+		{ - favoritesItem
+			generation = 0;
+			name = Favorites;
+			idOrFolder = folder;
+		}
+	}
+
+	- mapOslcRmCollections = { IRPYRawContainer 
+		- size = 0;
+	}
+}
+
