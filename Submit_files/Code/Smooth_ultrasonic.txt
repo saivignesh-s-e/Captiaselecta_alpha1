@@ -1,0 +1,197 @@
+#include <Servo.h> 
+
+Servo myservo;  // create servo object to control a servo 
+
+const int trigPin = 2;
+const int echoPin = 4;
+
+int pinLB=12;     // 
+int pinLF=3;     // 
+
+int pinRB=6;    // 
+int pinRF=9;    // 
+int pwmLeft = 10;
+int pwmRight = 11;
+
+int inputPin = A0;  // 
+int outputPin =A1;  //
+
+
+const int Step = 3;
+const int Size = 61;   // size of distance array =(180/Step) +1
+
+int Delay;
+int straight = 90;          // angle of the forward direction
+int distance[Size];
+int s=16;
+long int Fdistance=0;
+long int microseconds=0;
+
+
+
+void setup() {
+  // put your setup code here, to run once:
+    Serial.begin(9600);     // 
+
+  pinMode(pinLB,OUTPUT); // 
+  pinMode(pinLF,OUTPUT); //
+  pinMode(pinRB,OUTPUT); // 
+  pinMode(pinRF,OUTPUT); //
+  //analogWrite(pwmLeft,20);
+//analogWrite(pwmRight,200);
+  pinMode(inputPin, INPUT);    // 
+  pinMode(outputPin, OUTPUT);  // 
+   myservo.attach(5, 570, 2320);  // attaches the servo on pin 5 to the servo object 
+  Delay = 10 * Step;            // assuming 10ms/degree speed
+  myservo.write(straight);
+}
+
+long int microsecondsToCentimeters()
+  {
+  
+  long duration;
+  pinMode(trigPin, OUTPUT);
+  digitalWrite(trigPin, LOW);
+  delayMicroseconds(2);
+  digitalWrite(trigPin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trigPin, LOW);
+  pinMode(echoPin, INPUT);
+  duration = pulseIn(echoPin, HIGH);
+
+  microseconds = duration;
+  
+  return microseconds / 29 / 2;
+  }
+
+void ask_pin_F()   //  
+    {
+      myservo.write(90);
+  
+  Fdistance = microsecondsToCentimeters();
+  
+ Serial.print("Fdistance is : ");
+  Serial.print(Fdistance);
+  Serial.print("cm");
+  Serial.println();
+  
+               // 
+      
+      delay(100);
+      
+    } 
+    void advance()     // 
+    {
+     digitalWrite(pinRB,LOW);  // 
+     digitalWrite(pinRF,HIGH);
+     digitalWrite(pinLB,LOW);  //
+     digitalWrite(pinLF,HIGH);
+          
+    }
+
+    void turnR()        //
+    {
+     digitalWrite(pinRB,HIGH);  //
+    digitalWrite(pinRF,LOW);
+    digitalWrite(pinLB,LOW);
+    digitalWrite(pinLF,HIGH);  //
+     
+    }
+void turnL()        //
+    {
+     digitalWrite(pinRB,LOW);
+    digitalWrite(pinRF,HIGH);   //
+    digitalWrite(pinLB,HIGH);   //
+    digitalWrite(pinLF,LOW);
+
+    }
+
+void stopp(int f)         //
+    {
+     digitalWrite(pinRB,LOW);
+     digitalWrite(pinRF,LOW);
+     digitalWrite(pinLB,LOW);
+     digitalWrite(pinLF,LOW);
+     delay(f * 100);
+    }
+    void back()          //
+    {
+
+     digitalWrite(pinRB,HIGH);  //
+     digitalWrite(pinRF,LOW);
+     digitalWrite(pinLB,HIGH);  //
+     digitalWrite(pinLF,LOW);
+  
+    }
+    
+void loop() {
+  // put your main code here, to run repeatedly
+  
+  ask_pin_F();    //
+  delay(100);
+  // if there is an obstacle less than 50cm ahead, stop
+  // and find alternate path
+
+  if(Fdistance < 50) { 
+      stopp(1);
+      back();
+      delay(100);
+      rangeSweep(straight-90, straight+90, distance);
+      myservo.write(straight);
+      int angle = getAngle(distance);
+      
+      if(angle > (straight+10)) 
+      {
+        turnR();
+        delay(s * (angle-straight)); // turn right
+      } 
+      
+      else if(angle < (straight-10)) 
+      {
+        turnL();
+        delay(s * (straight-angle)); // turn left
+      } 
+      else 
+      {
+        advance();
+        delay(5000); // 
+      }
+  }
+ 
+}
+
+/**
+ * Reads distance over 180 degrees twice in left-to-right
+ * and right-to-left sweeps then average the readings
+ */
+void rangeSweep(int start, int endd, int distance[]) {
+  int store_position = 0;    // variable to store the servo position
+  for(store_position = start; store_position<endd; store_position+=Step) {
+    myservo.write(store_position);              // tell servo to go to position in variable 'pos' 
+    delay(Delay);               // waits 10ms/degree for the servo to reach the position 
+    distance[int(store_position/Step)] = microsecondsToCentimeters();
+  }
+
+  for(store_position = endd; store_position>start; store_position-=Step) {                                
+    myservo.write(store_position);              // tell servo to go to position in variable 'pos' 
+    delay(Delay); 
+    distance[int(store_position/Step)] += microsecondsToCentimeters();
+    distance[int(store_position/Step)] /= 2;
+  }
+}
+
+/**
+ * Get the angle at which the distance is maximum
+ */
+int getAngle(int distance[]) {
+  int maxDist=0;
+  int angle=straight;
+  for(int i = 0; i < Size; i++) { 
+    if(maxDist<distance[i]) {
+      maxDist = distance[i];
+      angle = i * Step;
+    }
+  }
+  return angle;
+
+}

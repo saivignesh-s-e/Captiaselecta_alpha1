@@ -1,0 +1,142 @@
+// Motor pins
+int pinLB=12;     // Left Back
+int pinLF=3;     // Left Forward
+int pinRB=6;    // Right Back
+int pinRF=9;    // Right Forward
+int pwmLeft = 10; //PWM Right
+int pwmRight = 11; //PWM Right
+
+
+// Bluetooth input
+char input; // Input
+int LED= 13;  // LED PIN for checking
+
+
+void setup()
+{
+Serial.begin(9600);
+analogWrite(pwmLeft,200);
+analogWrite(pwmRight,200);
+pinMode(pinLB,OUTPUT); 
+pinMode(pinLF,OUTPUT); 
+pinMode(pinRB,OUTPUT); 
+pinMode(pinRF,OUTPUT); 
+pinMode(LED, OUTPUT);  
+Serial.println("Choose Mode");
+Serial.println("1 for Autonomous Mode");
+Serial.println("2 for Manual Mode");
+Serial.println("3 for Line Follower");
+Serial.println("9 for LED OFF (TEST MODE)");
+Serial.println("0 for LED ON (TEST MODE)");
+Serial.println(">> START<<"); 
+}
+
+void loop()
+{
+ if(Serial.available()>0)  
+  {  
+    input= Serial.read();  
+    if(input=='0')  
+    {  
+      Serial.println("ON");  
+      digitalWrite(LED, HIGH);  
+      delay(2000);  
+    }  
+    else if(input=='9')  
+    {  
+      Serial.println("OFF");  
+      digitalWrite(LED, LOW);  
+      delay(2000);  
+    }
+else if(input == '2' || input == 'w' || input == 's' || input == 'a' || input == 'd' || input == 'x')
+  {
+  if (input == '2')
+  {
+    Serial.println("Manual Control");
+  }
+    if(input=='w')  
+    {  
+      Serial.println("FORWARD");
+      FORWARD();
+    }  
+    else if(input=='s')  
+    {  
+      Serial.println("BACKWORD");
+      BACKWORD();
+    }  
+    else if(input=='a')  
+    {  
+      Serial.println("LEFT");
+      LEFT();
+    }  
+    else if(input=='d')  
+    {  
+      Serial.println("RIGHT");
+      RIGHT();
+    }    
+        else if(input=='x')  
+    {  
+      Serial.println("STOP");
+      STOP();
+    }   
+
+  }
+
+  else  
+    {  
+      Serial.println("NO INPUT");  
+      Serial.println(input);  
+    } 
+
+
+}
+}
+
+// Functions
+void FORWARD()
+  {
+    digitalWrite(pinRB,LOW);  // 
+    digitalWrite(pinRF,HIGH);
+    digitalWrite(pinLB,LOW);  //
+    digitalWrite(pinLF,HIGH);
+    delay(5);  
+
+  
+  }
+
+void BACKWORD()
+  {
+    digitalWrite(pinRB,HIGH);  //
+    digitalWrite(pinRF,LOW);
+    digitalWrite(pinLB,HIGH);  //
+    digitalWrite(pinLF,LOW);
+    delay(5);
+  }
+
+void RIGHT()
+  {
+    digitalWrite(pinRB,HIGH);  //
+    digitalWrite(pinRF,LOW);
+    digitalWrite(pinLB,LOW);
+    digitalWrite(pinLF,HIGH);  //
+    delay(5);
+  }
+
+
+void LEFT()
+  {
+    digitalWrite(pinRB,LOW);
+    digitalWrite(pinRF,HIGH);   //
+    digitalWrite(pinLB,HIGH);   //
+    digitalWrite(pinLF,LOW);
+    delay(5);
+  }
+
+void STOP()
+  {
+    digitalWrite(pinRB,LOW);  // 
+    digitalWrite(pinRF,LOW);
+    digitalWrite(pinLB,LOW);  //
+    digitalWrite(pinLF,LOW);
+  }
+
